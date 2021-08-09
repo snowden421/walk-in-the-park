@@ -1,0 +1,254 @@
+:root{
+    --first-color: #076023;
+    --second-color: #000000;
+    --third-color: #7e7e7e;
+    --fourth-color: #3e3d3a;
+    --fifth-color: #ffffff;
+    --sixth-color: #ffbd00;
+}
+
+html{
+    background-color: var(--fourth-color);
+}
+
+body{
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.columns{
+    margin: 30px;
+}
+
+.column{
+    margin:50px;
+}
+
+.title{
+    font-size: 125px;
+    color: var(--fifth-color); 
+    padding: 30px;
+    margin: 0px;
+    border-bottom: solid 5px var(--first-color);
+    background-color: var(--second-color);
+}
+
+.search-func{
+    color: var(--second-color);
+    padding-bottom: 30px;
+    border: solid 2px var(--second-color);
+    background-color: var(--third-color);
+    box-shadow: 0 0 10px var(--first-color);
+    border-radius: 20px;
+}
+
+.button{
+    color: (var(--second-color));
+    background-color: var(--sixth-color);
+}
+
+.weather-col{
+    color: var(--second-color);
+    padding: 100px;
+    border: solid 2px;
+    margin: 30px;
+    border: solid 2px var(--second-color);
+    background-color: var(--third-color);
+    box-shadow: 0 0 10px var(--first-color);
+    border-radius: 20px;
+}
+
+.example-text {
+    color: var(--fifth-color);
+    text-align: center;
+    font-size: larger;
+}
+
+.weather-item {
+    color: var(--sixth-color);
+    width: 10%;
+    margin: 0 5px;
+    display: flex;
+}
+
+.weather-title {
+    color: var(--sixth-color);
+    font-size: larger;
+    font-style: italic;
+    text-align: left;
+}
+
+.park-col{
+    color: var(--second-color);
+    padding: 100px;
+    border: solid 2px;
+    margin: 30px;
+    border: solid 2px var(--second-color);
+    background-color: var(--third-color);
+    box-shadow: 0 0 10px var(--first-color);
+    border-radius: 20px;
+}
+
+.park-result{
+    display: flex;
+    flex-flow: column;
+    padding-left: 300px;
+}
+
+.park-result img{
+    height: 600px;
+    width: 800px;
+    max-width: 80%;
+}
+
+.park-item {
+    color: var(--sixth-color);
+    border: solid 2px var(--second-color);
+    width: 800px;
+}
+
+.parkName{
+    background-color: var(--second-color);
+    text-align: center;
+    font-size: larger; 
+}
+
+.description{
+    background-color: var(--fourth-color);
+}
+
+
+.park-list {
+    color: var(--sixth-color);
+    font-size: larger;
+    font-style: italic;
+}
+
+.weather-result{
+    margin: 10px;
+    display: flex;
+}
+
+.hide {
+    display: none;
+}
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+     .weather-result{
+        flex-direction: column;
+        padding-left: 250px;
+    }
+
+    .weather-item{
+        width: 400px;
+    }
+
+    .weather-result img{
+        height: 100px;
+        width: fit-content;
+    }
+
+    .park-col{
+        padding: 100px 100px 100px 180px;
+    }
+
+    .park-result{
+        padding: 0px;
+    }
+    
+    .park-item{
+        width: 509px;
+    }
+  }
+  
+  /* MEDIA QUERY FOR TABLETS AND SMALLER */
+  @media screen and (max-width: 768px) {
+      .search-func h2{
+          padding-left: 200px;
+      }
+
+    .park-item{
+        width: 323px;
+    }
+
+    .weather-title{
+        padding-left: 120px;
+    }
+
+    .weather-item{
+        padding-left: 120px;
+    }
+
+    .weather-result{
+        padding: 0px;
+    }
+
+    .weather-result img{
+        padding-left: 120px;
+    }
+
+    .park-col{
+        padding: 50px 20px 50px 20px;
+    }
+
+    .park-item{
+        width: 451px;
+    }
+
+    .park-result{
+        padding-left: 100px;
+    }
+    
+    .park-result img{
+        height: auto;
+    }
+  }
+  
+  /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+  @media screen and (max-width: 575px) {
+    .search-func h2{
+        padding-left: 100px;
+    }
+
+    .search-func form{
+        padding-left: 80px;
+    }
+
+    .search-func button{
+        margin-right: 20px;
+    }
+
+  .park-item{
+      width: 329px;
+  }
+
+  .weather-col{
+      padding: 0px;
+  }
+
+  .weather-title{
+      padding-left: 120px;
+  }
+
+  .weather-item{
+      padding-left: 120px;
+  }
+
+  .weather-result img{
+      padding-left: 120px;
+  }
+
+  .park-col{
+      padding: 50px 0px 0px 0px;
+  }
+
+  .park-result{
+      padding-left: 100px;
+  }
+  
+  .park-result img{
+      height: 250px;
+      width: auto;
+      
+  }
+}
