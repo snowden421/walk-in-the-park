@@ -21,7 +21,7 @@ function myFunction() {
       var cityLat = response.city.coord.lat;
       var cityLong = response.city.coord.lon;
       var datesArray = []
-      weatherDisplay.innerHTML = "<h2" + " class = 'weather-title'" + ">" + "5 Day forecast:" + "</h2>" + "<br>";
+      weatherDisplay.innerHTML = "<h2" + " class = 'weather-title'" + ">" + "</h2>" + "<br>";
 
       /* use jQuery to bring weather data from the API to the 5-day forecast cards */
       for (let day = 1; day <= 5; day++) {
@@ -32,26 +32,22 @@ function myFunction() {
       for (let index = 4; index <= 36; index += 8) {
         var dateEl = document.createElement("p");
         var tempEl = document.createElement("p");
-        var windEl = document.createElement("p");
         var HumidityEl = document.createElement("p");
         var iconEl = document.createElement("img");
 
 
         dateEl.className = "weather-item";
         tempEl.className = "weather-item";
-        windEl.className = "weather-item";
         HumidityEl.className = "weather-item";
 
 
         dateEl.textContent = datesArray[(index - 4) / 8];
         tempEl.textContent = "Temp: " + response.list[index].main.temp + " °F";
-        windEl.textContent = "Wind: " + response.list[index].wind.speed + " mph";
         HumidityEl.textContent = "Humidity: " + response.list[index].main.humidity + "%";
         iconEl.setAttribute("src", "http://openweathermap.org/img/w/" + response.list[index].weather[0].icon + ".png");
 
         weatherDisplay.appendChild(dateEl);
         weatherDisplay.appendChild(tempEl);
-        weatherDisplay.appendChild(windEl);
         weatherDisplay.appendChild(HumidityEl);
         weatherDisplay.appendChild(iconEl);
       }

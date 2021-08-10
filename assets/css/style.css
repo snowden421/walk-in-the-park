@@ -20,11 +20,11 @@ body{
 }
 
 .column{
-    margin:50px;
+    margin:20px;
 }
 
 .title{
-    font-size: 125px;
+    font-size: 75px;
     color: var(--fifth-color); 
     padding: 30px;
     margin: 0px;
@@ -46,15 +46,38 @@ body{
     background-color: var(--sixth-color);
 }
 
+.hero {
+    background-image: url('../assets/images/redwood.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: left;
+    background-attachment: fixed;
+    height: 300px;
+    position: relative;
+}
+
+.hero h2 {
+    color: white;
+    font-size: larger;
+}
+
+.hero label {
+    color: white;
+}
+
 .weather-col{
     color: var(--second-color);
-    padding: 100px;
+    padding: 10px;
     border: solid 2px;
-    margin: 30px;
     border: solid 2px var(--second-color);
     background-color: var(--third-color);
     box-shadow: 0 0 10px var(--first-color);
     border-radius: 20px;
+}
+
+.weather-col p {
+    font-size: 11px;
 }
 
 .example-text {
@@ -79,7 +102,7 @@ body{
 
 .park-col{
     color: var(--second-color);
-    padding: 100px;
+    padding: 30px;
     border: solid 2px;
     margin: 30px;
     border: solid 2px var(--second-color);
@@ -91,13 +114,12 @@ body{
 .park-result{
     display: flex;
     flex-flow: column;
-    padding-left: 300px;
+    padding-left: 250px;
 }
 
 .park-result img{
     height: 600px;
     width: 800px;
-    max-width: 80%;
 }
 
 .park-item {
@@ -133,8 +155,19 @@ body{
 }
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 1200px) {
+    
+    .park-result{
+        padding-left: 150px;
+    }
+}
+
 @media screen and (max-width: 980px) {
-     .weather-result{
+    .park-result img{
+        height: 400px;
+        width: 510px;
+    }
+    .weather-result{
         flex-direction: column;
         padding-left: 250px;
     }
@@ -163,14 +196,17 @@ body{
   
   /* MEDIA QUERY FOR TABLETS AND SMALLER */
   @media screen and (max-width: 768px) {
-      .search-func h2{
+    .search-func h2{
           padding-left: 200px;
       }
 
     .park-item{
         width: 323px;
     }
-
+    .park-result img{
+        height: 300px;
+        width: 450px;
+    }
     .weather-title{
         padding-left: 120px;
     }

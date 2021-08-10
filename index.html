@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Walk in the Park</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
 
 <body>
@@ -17,16 +17,16 @@
     </div>
 
     <!--Search DIV-->
-    <div class="search-func columns is-centered is-mobile" id="search">
+    <div class="search-func columns is-centered is-mobile hero" id="search">
         <div class="column">
             <div class="columns is-centered">
-                <h2>Search Location</h2>
+                <h2>Enter a city with format "City, State Code" to see weather and park info </h2>
             </div>
 
             <!--enter location-->
             <div class="columns is-centered is-mobile" id="enter-location">
                 <form action="location">
-                    <label for="location">Enter "City, State Code"</label>
+                    <label for="location">Example: San Francisco, CA</label>
                     <input type="text" id="searchTerm" />
                 </form>
             </div>
@@ -37,15 +37,7 @@
         </div>
     </div>
 
-    <!-- location text -->
-    <div class="example-text is-mobile" id="results">
-        <!--Location result-->
-        <p>Enter with format exactly as shown: San Francisco, CA</p>
-    </div>
-
     <!--Results-->
- 
-
         <!-- weather results -->
         <div class="weather-col columns is-mobile">
             <div class="column">
@@ -71,7 +63,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!--javascript-->
-    <script src="./assets/js/script.js"></script>
+    <script src="./assets/script.js"></script>
 </body>
 
 </html>
